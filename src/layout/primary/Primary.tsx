@@ -14,11 +14,11 @@ const Container = tw.div`
     bg-pink-300
 `;
 
-const Button = tw.button`
-    btn
-    btn-primary
-    w-64
-    mt-12
+const Content = tw.div`
+    flex
+    flex-1
+    justify-center
+    p-8
 `;
 
 const PrimaryLayout = ({ children }: { children: ReactNode }) => {
@@ -33,9 +33,7 @@ const PrimaryLayout = ({ children }: { children: ReactNode }) => {
 
       <main className={styles.main}>
         <Navbar />
-        {children}
-        {/* <h1 className="font-bold">Your wallet is {address}</h1> */}
-        {/* <Button onClick={onConnectAccount}>Connect Wallet</Button> */}
+        <Content>{children}</Content>
         <Footer />
       </main>
     </>
