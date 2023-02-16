@@ -1,9 +1,21 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import tw from "tailwind-styled-components";
 
-const inter = Inter({ subsets: ["latin"] });
+const Container = tw.div`
+    flex
+    justify-center
+    items-center
+    w-full
+    bg-indigo-600
+`;
+
+const Button = tw.button`
+    btn
+    btn-primary
+    w-64
+    mt-12
+`;
 
 export default function Home() {
   return (
@@ -14,9 +26,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </main>
+      <Container>
+        <main className={styles.main}>
+          <h1 className="text-3xl font-bold underline">Hello World!</h1>
+          <Button>Daisy UI Button</Button>
+        </main>
+      </Container>
     </>
   );
 }
